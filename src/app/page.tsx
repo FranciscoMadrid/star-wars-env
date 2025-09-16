@@ -1,11 +1,22 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import HeroImage from '../../public/bg-deathstar.jpg'
+import FilmsContainer from "@/components/FilmsContainer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        Hello World
-      </main>
-    </div>
+    <>
+      <Hero 
+        image={HeroImage}
+        title="Star Wars"
+        subtitle="Legendaries Movies"/>
+        
+        <section 
+          id="collection"
+          className="w-full bg-gradient-to-b from-background via-gray-900 to-gray-600 h-full">
+          <div className="max-w-7xl mx-auto">
+            <FilmsContainer/>
+          </div>
+        </section>
+    </>
   );
 }
