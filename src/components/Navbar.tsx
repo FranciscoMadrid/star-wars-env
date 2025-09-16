@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import PageIconLight from '../../public/millennium-falcon-light.png'
+import Link from 'next/link';
 
 export default function Navbar() {
     const [opacity, setOpacity] = useState(0);
@@ -25,12 +25,12 @@ export default function Navbar() {
             style={{backgroundColor: `rgba(0, 0, 0, ${opacity})`}}>
             <div className='flex flex-row max-w-7xl mx-auto items-center gap-2 justify-between'>
                 {/* Icon and Title */}
-                <a 
+                <Link 
                     href='/'
                     className='flex flex-row gap-2 items-center font-bold transition ease-in-out duration-300 text-white hover:text-primary'>
-                        <img src={PageIconLight.src} className='h-12 w-12'/>
+                        <img src="/millennium-falcon-light.png" className='h-12 w-12'/>
                         <span>Star Wars</span>
-                </a>
+                </Link>
             </div>
         </nav>
     )
