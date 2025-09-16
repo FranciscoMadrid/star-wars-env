@@ -23,7 +23,7 @@ export default async function FilmPage({params} : FilmPageProps) {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}
-            className="text-white h-full w-full pt-25 p-10">
+            className="text-white min-h-screen w-full pt-25 p-10">
             <div className="max-w-7xl mx-auto">
                 <div className="w-full border-2 rounded-2xl overflow-hidden border-white grid grid-cols-1 md:grid-cols-2">
                 <img
@@ -32,15 +32,15 @@ export default async function FilmPage({params} : FilmPageProps) {
                     className="w-full h-auto max-h-[800px] rounded-lg object-cover"/>
 
                     {/* Film Info */}
-                    <div className="flex flex-col gap-10 items-center p-6 justify-evenly bg-background/20 backdrop-blur-2xl">
+                    <div className="flex flex-col gap-10 items-center p-6 justify-evenly bg-gradient-to-b from-background/40 to-blue-950/20 backdrop-blur-2xl">
                         {/* Title and Release Date */}
                         <div className='flex flex-col gap-2 items-center'>
                             <h1 className="text-4xl font-bold tracking-wide text-primary text-center">
                                 {film.title}
                             </h1>
                             <p className='text-xl font-light tracking-wide text-primary text-center'>{film.release_date}</p>
+                            <hr className='h-[1px] bg-white w-full rounded-full'/>
                         </div>
-
                         {/* Opening Crawl */}
                         <p className="text-lg md:text-xl font-light">{film.opening_crawl}</p>
                         
